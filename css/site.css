@@ -17,8 +17,8 @@ NON-RESPONSIVE START
   width: 960px;
 }
 .navbar-nav > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
 /* Finesse the page header spacing */
@@ -83,7 +83,7 @@ NON-RESPONSIVE START
 .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
 .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
   color: #fff !important;
-  background-color: #428bca !important;
+  background-color: #fecb09 !important;
 }
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a,
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -95,11 +95,11 @@ NON-RESPONSIVE START
 NON-RESPONSIVE END
 */
 ::selection {
-  background-color: #812d2a;
+  background-color: #fecb09;
   color: #FFF;
 }
 ::-moz-selection {
-  background-color: #812d2a;
+  background-color: #fecb09;
   color: #FFF;
 }
 small {
@@ -113,11 +113,27 @@ a,
 button {
   transition: all 0.25s ease 0s;
 }
+hr {
+  border: 0;
+  height: 10px;
+  background: url(../imagem/site/strip.png) repeat-x;
+}
 /*
 FONTS START
 **********************************************************************************************/
-.box-chamada {
-  font-family: 'robotoblack', Arial, sans-serif;
+.footer-header,
+.menu-categorias {
+  font-family: 'folio_bdcn_btbold', Arial, sans-serif;
+  font-weight: normal;
+}
+.categoria .title,
+.menu,
+.site-header .carrinho {
+  font-family: 'MyriadproBold', Arial, sans-serif;
+  font-weight: normal;
+}
+.extra-footer small {
+  font-family: Arial, sans-serif;
   font-weight: normal;
 }
 /**********************************************************************************************
@@ -126,6 +142,112 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
+.extra-geral {
+  min-width: 960px;
+}
+.extra-header {
+  background: url(../imagem/site/bg-header.jpg) no-repeat center top;
+}
+.extra-header .navbar-default {
+  background: none;
+}
+.extra-header .navbar {
+  border: 0;
+  margin: 0;
+  text-transform: uppercase;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.extra-header .line-1 {
+  height: 96px;
+}
+.extra-header .menu {
+  margin: 32px 0;
+  font-size: 12px;
+}
+.extra-header .menu > li > a {
+  padding: 6px 8px 4px;
+}
+.extra-header .menu > li + li {
+  background: url(../imagem/site/bg-menu-item.png) no-repeat left center;
+  padding-left: 4px;
+}
+.extra-header .menu-categorias {
+  font-size: 16px;
+}
+.extra-header .menu-categorias > li + li {
+  background: url(../imagem/site/bg-menu-categoria-item.png) no-repeat left center;
+  padding-left: 5px;
+}
+.extra-header .navbar-bloco {
+  text-transform: uppercase;
+  margin: 28px 0;
+  font-size: 12px;
+  text-align: center;
+}
+.extra-header .navbar-bloco .link {
+  display: inline-block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 10px 12px;
+  background: #FFF;
+  height: 40px;
+  min-width: 68px;
+  color: #000;
+}
+.extra-header .navbar-bloco .link * {
+  vertical-align: middle;
+}
+.extra-header .navbar-bloco .link .text {
+  margin-left: 6px;
+}
+.extra-header .navbar-bloco .link:hover {
+  text-decoration: none;
+}
+.extra-header .navbar-bloco .link:hover .text {
+  text-decoration: underline;
+}
+.extra-header .navbar-bloco.inverse a {
+  background: #000;
+  color: #FFF;
+}
+.extra-header .navbar-bloco.pull-right {
+  margin-left: 10px;
+}
+.extra-header .navbar-bloco.carrinho {
+  font-size: 14px;
+}
+.extra-footer {
+  background: #000;
+  text-align: center;
+  line-height: 1.2;
+}
+.extra-footer,
+.extra-footer a {
+  color: #b7b7b7;
+}
+.extra-footer .site-footer {
+  padding-top: 30px;
+}
+.extra-footer .footer-header {
+  text-transform: uppercase;
+  display: block;
+  color: #fecb09;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.extra-footer small {
+  font-size: 10px;
+}
+.extra-footer .social-footer a {
+  margin: 0 5px;
+}
 /**********************************************************************************************
 ESTRUTURA END
 */
@@ -150,6 +272,144 @@ CLASSES START
   -moz-border-radius: 150px;
   border-radius: 150px;
 }
+.box-home {
+  background: url(../imagem/site/bg-home.jpg) no-repeat center top;
+}
+.box-banner {
+  height: 386px;
+  position: relative;
+  padding-top: 39px;
+  padding-left: 2px;
+}
+.box-banner .cycle-slideshow,
+.box-banner .cycle-slideshow li,
+.box-banner .cycle-slideshow .mask {
+  width: 936px;
+  height: 297px;
+  overflow: hidden;
+}
+.box-banner .cycle-slideshow {
+  position: relative;
+}
+.box-banner .cycle-slideshow .content {
+  position: relative;
+}
+.box-banner .cycle-slideshow .imagem {
+  position: relative;
+  z-index: 1;
+}
+.box-banner .cycle-slideshow .mask {
+  display: block;
+  background: url(../imagem/site/banner-mask.png) no-repeat left top;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.box-banner .cycle-nav {
+  position: absolute;
+  right: 40px;
+  bottom: 15px;
+}
+.box-banner .enfeite {
+  position: absolute;
+  left: 374px;
+  bottom: -251px;
+}
+.box-produto {
+  text-align: center;
+  position: relative;
+}
+.box-produto .box-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background: url(../imagem/site/bg-black.png) repeat;
+  font-size: 18px;
+  padding: 15px;
+}
+.box-produto .box-imagem {
+  height: 214px;
+  position: relative;
+  z-index: 1;
+}
+.box-produto .box-preco {
+  color: #c04545;
+  font-size: 18px;
+  background: #fecb09;
+  padding: 10px 0;
+}
+.box-produto .box-content {
+  height: 132px;
+}
+.box-produto .box-content .desc {
+  min-height: 82px;
+  padding: 30px 40px 15px;
+  display: block;
+}
+.box-categorias {
+  background: url(../imagem/site/bg-categorias.jpg) no-repeat center bottom;
+  padding-bottom: 42px;
+  margin-bottom: 30px;
+}
+.box-categorias .box-content {
+  text-align: center;
+  height: 136px;
+}
+.box-categorias .categoria {
+  position: relative;
+  display: inline-block;
+  margin: 0 20px;
+}
+.box-categorias .categoria .imagem {
+  display: block;
+  position: relative;
+  height: 136px;
+}
+.box-categorias .categoria .title {
+  display: block;
+  background: #b7b7b7;
+  padding: 6px 0;
+  text-align: center;
+  width: 42px;
+  height: 42px;
+  color: #FFF;
+  font-size: 25px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -ms-border-radius: 0px 0px 5px 5px;
+  -o-border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 5px 5px;
+  position: absolute;
+  left: 50%;
+  margin-left: -21px;
+  bottom: -42px;
+}
+.box-categorias .categoria .title .icon {
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+  top: -6px;
+}
+.box-categorias .categoria:hover .title {
+  text-decoration: underline;
+}
+.cycle-nav span {
+  display: inline-block;
+  cursor: pointer;
+  background: url(../imagem/site/cycle-nav.gif) no-repeat left top;
+  text-indent: -1000px;
+  overflow: hidden;
+  text-align: left;
+  width: 15px;
+  height: 15px;
+  margin: 0 4px;
+}
+.cycle-nav span.cycle-pager-active {
+  background-position: -15px top;
+}
 .imagem {
   display: inline-block;
   overflow: hidden;
@@ -169,6 +429,48 @@ CLASSES START
   vertical-align: middle;
   display: inline-block;
   background-image: url(../imagem/site/icon.png);
+}
+.large {
+  font-size: 16px;
+}
+.lista-produtos {
+  margin: 0 -10px;
+}
+.lista-produtos > li {
+  float: left;
+  width: 300px;
+  margin: 0 10px;
+  border: 1px solid #e1e0e0;
+  overflow: hidden;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -ms-border-radius: 10px 10px 0px 0px;
+  -o-border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+  margin-bottom: 25px;
+}
+.page-header {
+  background: url(../imagem/site/strip.png) repeat-x center;
+  text-transform: uppercase;
+  padding: 0;
+  border: 0;
+  margin-bottom: 24px;
+}
+.page-header small {
+  font-size: 16px;
+  color: #b7b7b7;
+  display: block;
+  margin-top: -12px;
+}
+.page-header h1,
+.page-header h2,
+.page-header h3 {
+  display: inline-block;
+  line-height: .9;
+  background: #FFF;
+  margin: 0;
+  padding: 0;
+  padding-right: 15px;
 }
 .space {
   width: 1%;

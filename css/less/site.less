@@ -1,24 +1,24 @@
-@primary-color: #812d2a; 
-@secondary-color: #089bdf;  
+@primary-color: #fecb09; 
+@secondary-color: #040707;  
 @third-color: #b6967e;  
 /*
 FUNÇÕES PADRÕES START
 *********************************************************************/
 .border-radius(@style) {
-    -webkit-border-radius: @style;
-    -moz-border-radius: @style;
-    border-radius: @style;
+	-webkit-border-radius: @style;
+	-moz-border-radius: @style;
+	border-radius: @style;
 }
 .box-shadow(@style, @c) when (iscolor(@c)) {
-    -webkit-box-shadow: @style @c;
-    box-shadow:         @style @c;
+	-webkit-box-shadow: @style @c;
+	box-shadow:         @style @c;
 }
 .box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-    .box-shadow(@style, rgba(0, 0, 0, @alpha));
+	.box-shadow(@style, rgba(0, 0, 0, @alpha));
 }
 
 .clear, .first{
-    clear:both;
+	clear:both;
 }
 /*********************************************************************
 FUNÇÕES PADRÕES END
@@ -28,7 +28,7 @@ NON-RESPONSIVE START
 **********************************************************************************************/
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
 .container {max-width: none !important;width: 960px;}
-.navbar-nav > li > a {padding-top: 15px;padding-bottom:15px;}
+.navbar-nav > li > a {padding-top: 22px;padding-bottom:22px;}
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
 /* Finesse the page header spacing */.page-header {margin-bottom: 30px;}.page-header .lead {margin-bottom: 10px;}/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*//* Reset the container *//* Always float the navbar header */.navbar-header {float: left;}/* Undo the collapsing navbar */.navbar-collapse {display: block !important;height: auto !important;padding-bottom: 0;overflow: visible !important;}.navbar-toggle {display: none;}.navbar-collapse {border-top: 0;}.navbar-brand {margin-left: -15px;}/* Always apply the floated nav */.navbar-nav {float: left;margin: 0;}.navbar-nav > li {float: left;}/* Redeclare since we override the float above */.navbar-nav.navbar-right {float: right;}/* Undo custom dropdowns */.navbar .navbar-nav .open .dropdown-menu {position: absolute;float: left;background-color: #fff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-width: 0 1px 1px;border-radius: 0 0 4px 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);}.navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #333;}.navbar .navbar-nav .open .dropdown-menu > li > a:hover,.navbar .navbar-nav .open .dropdown-menu > li > a:focus,.navbar .navbar-nav .open .dropdown-menu > .active > a,.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {color: #fff !important;background-color: @primary-color !important;}.navbar .navbar-nav .open .dropdown-menu > .disabled > a,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {color: #999 !important;background-color: transparent !important;}
 /**********************************************************************************************
@@ -39,17 +39,69 @@ NON-RESPONSIVE END
 small {display: inline-block;line-height: 1.1;}
 textarea {resize:vertical;}
 a, button  {transition: all 0.25s ease 0s;}
+hr {border:0;height: 10px;background: url(../imagem/site/strip.png) repeat-x;}
 /*
 FONTS START
 **********************************************************************************************/
-.box-chamada {font-family: 'robotoblack', Arial, sans-serif;font-weight: normal;}
+.footer-header, .menu-categorias {font-family: 'folio_bdcn_btbold', Arial, sans-serif;font-weight: normal;}
+.categoria .title, .menu, .site-header .carrinho {font-family: 'MyriadproBold', Arial, sans-serif;font-weight: normal;}
+.extra-footer small {font-family: Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
 */
 /*
 ESTRUTURA START
 **********************************************************************************************/
+.extra-geral {min-width: 960px;}
+.extra-header {
+	background: url(../imagem/site/bg-header.jpg) no-repeat center top;
+	.site-header {}
+	.navbar-default {background: none;}
+	.navbar {border:0;margin:0;text-transform: uppercase;-webkit-border-radius: 0;-moz-border-radius: 0;-ms-border-radius: 0;-o-border-radius: 0;border-radius: 0;}
+	.line-1 {height: 96px;}
+	.menu {
+		margin:32px 0;font-size: 12px;
+		> li {
+			> a {padding:6px 8px 4px;}
+			+ li {background: url(../imagem/site/bg-menu-item.png) no-repeat left center;padding-left: 4px;}
+		}
+	}
+	.menu-categorias {
+		font-size: 16px;
+		> li {
+			> a {}
+			+ li {background: url(../imagem/site/bg-menu-categoria-item.png) no-repeat left center;padding-left: 5px;}
+		}
+	}
+	.navbar-bloco {
+		text-transform: uppercase;margin:28px 0;font-size: 12px;text-align: center;
+		.link {
+			display: inline-block;-webkit-border-radius: 4px;-moz-border-radius: 4px;-ms-border-radius: 4px;-o-border-radius: 4px;border-radius: 4px;padding:10px 12px;background: #FFF;height: 40px;min-width: 68px;color: #000;
+			* {vertical-align: middle;}
+			.text {margin-left: 6px;}
+			&:hover {
+				text-decoration: none;
+				.text {text-decoration: underline;}
+			}
+		}
+		&.inverse {
+			a {background: #000;color: #FFF;}
+		}
+		&.pull-right {margin-left: 10px;}
+		&.carrinho {font-size: 14px;}
+	}
+}
 
+.extra-footer {
+	background: #000;text-align: center;line-height: 1.2;
+	&, a {color: #b7b7b7;}
+	.site-footer {padding-top:30px;}
+	.footer-header {text-transform: uppercase;display: block;color: @primary-color;font-size: 18px;margin-bottom: 10px;}
+	small {font-size: 10px;}
+	.social-footer {
+		a {margin:0 5px;}
+	}
+}
 /**********************************************************************************************
 ESTRUTURA END
 */
@@ -57,13 +109,70 @@ ESTRUTURA END
 CLASSES START
 **********************************************************************************************/
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
+
 .btn-gray {background: #EEE;color:#C93F2A;}
 .btn-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+.box-home {background: url(../imagem/site/bg-home.jpg) no-repeat center top;}
+.box-banner {
+	height: 386px;position: relative;padding-top:39px;padding-left:2px;
+	.cycle-slideshow, .cycle-slideshow li, .cycle-slideshow .mask {width: 936px;height: 297px;overflow: hidden;}
+	.cycle-slideshow {
+		position: relative;
+		.content {position: relative;}
+		.imagem {position: relative;z-index: 1;}
+		.mask {display: block;background: url(../imagem/site/banner-mask.png) no-repeat left top;position: absolute;left: 0;top: 0;z-index: 2;}
+	}
+	.cycle-nav {position: absolute;right: 40px;bottom: 15px;}
+	.enfeite {position: absolute;left: 374px;bottom: -251px;}
+}
+.box-produto {
+	text-align: center;position: relative;
+	.box-header {position: absolute;left: 0;right: 0;top: 0;z-index: 2;background: url(../imagem/site/bg-black.png) repeat;font-size: 18px;padding:15px;}
+	.box-imagem {height: 214px;position: relative;z-index: 1;}
+	.box-preco {color: #c04545;font-size: 18px;background: @primary-color;padding:10px 0;}
+	.box-content {
+		height: 132px;
+		.desc {min-height: 82px;padding:30px 40px 15px;display: block;}
+	}
+}
+.box-categorias {
+	background: url(../imagem/site/bg-categorias.jpg) no-repeat center bottom;padding-bottom: 42px;margin-bottom: 30px;
+	.box-content {text-align: center;height: 136px;}
+	.categoria {
+		position: relative;display: inline-block;margin:0 20px;
+		.imagem {display: block;position: relative;height: 136px;}
+		.title {
+			display: block;background: #b7b7b7;padding:6px 0;text-align: center;width: 42px;height: 42px;color: #FFF;font-size: 25px;-webkit-border-radius: 0px 0px 5px 5px;-moz-border-radius: 0px 0px 5px 5px;-ms-border-radius: 0px 0px 5px 5px;-o-border-radius: 0px 0px 5px 5px;border-radius: 0px 0px 5px 5px;position: absolute;left: 50%;margin-left: -21px;bottom:-42px;
+			.icon {position: absolute;left: 50%;margin-left: -5px;top:-6px;}
+		}
+		&:hover {
+			.title {text-decoration: underline;}
+		}
+	}
+}
+.cycle-nav {
+	span {
+		display: inline-block;cursor: pointer;background: url(../imagem/site/cycle-nav.gif) no-repeat left top;text-indent: -1000px;overflow: hidden;text-align: left;width: 15px;height: 15px;margin:0 4px;
+		&.cycle-pager-active {background-position: -15px top;}
+	}
+}
 
 .imagem {display: inline-block;overflow: hidden;max-width: 100%;}
 .imagem-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
 .inline-block {display:inline-block;}
 [class^='icon-'], [class*='icon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/icon.png);}
+
+.large {font-size: 16px;}
+.lista-produtos {
+	margin:0 -10px;
+	> li {float: left;width: 300px;margin:0 10px;border:1px solid #e1e0e0;overflow: hidden;-webkit-border-radius: 10px 10px 0px 0px;-moz-border-radius: 10px 10px 0px 0px;-ms-border-radius: 10px 10px 0px 0px;-o-border-radius: 10px 10px 0px 0px;border-radius: 10px 10px 0px 0px;margin-bottom: 25px;}
+}
+
+.page-header {
+	background: url(../imagem/site/strip.png) repeat-x center;text-transform: uppercase;padding:0;border:0;margin-bottom: 24px;
+	small {font-size: 16px;color: #b7b7b7;display: block;margin-top: -12px;}
+	h1, h2, h3 {display: inline-block;line-height: .9;background: #FFF;margin:0;padding:0;padding-right: 15px;}
+}
 
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
 .relative {position: relative;}
@@ -81,14 +190,14 @@ JQUERY UI END
 
 }
 @media (max-width: 767px) {
- /*    .site-geral:before {content:"TABLET";}*/
+	/*    .site-geral:before {content:"TABLET";}*/
 }
 @media (max-width: 480px) {
- /*#GERAL:before {content:"MOBILE";}*/
+	/*#GERAL:before {content:"MOBILE";}*/
 }
 @media (min-width: 768px) and (max-width: 980px) {
 
 }
 @media (min-width: 981px) and (max-width: 1200px) {
- /*#GERAL:before {content:"ACIMA DE TABLET";}*/
+	/*#GERAL:before {content:"ACIMA DE TABLET";}*/
 }
